@@ -1,0 +1,8 @@
+<mvc:View controllerName="nwproductsdata.controller.App" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns="sap.m">
+    <Shell id="shell" appWidthLimited="false">
+        <f:FlexibleColumnLayout id="idAppControl" layout="{settings>/layout}" backgroundDesign="Translucent" />
+    </Shell>
+</mvc:View>

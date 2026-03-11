@@ -1,0 +1,226 @@
+{
+  "Requests": [
+    {
+      "SlNo": 1,
+      "EmpId": "19999",
+      "EmpName": "Demo",
+      "PropertyName": "House",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "01.01.2025",
+      "DisposedOn": "31.11.2025",
+      "AppliedOn": "13.01.2026",
+      "Status": "Updated"
+    },
+    {
+      "SlNo": 2,
+      "EmpId": "19999",
+      "EmpName": "Demo",
+      "PropertyName": "Flat",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "05.01.2026",
+      "DisposedOn": "",
+      "AppliedOn": "13.01.2026",
+      "Status": "Approval Pending with SVP"
+    },
+    {
+      "SlNo": 3,
+      "EmpId": "19999",
+      "EmpName": "Demo",
+      "PropertyName": "Gold Necklace",
+      "PropertyType": "Movable",
+      "AcquiredOn": "10.01.2026",
+      "DisposedOn": "",
+      "AppliedOn": "13.01.2026",
+      "Status": "Approval Pending with SBU"
+    },
+
+    {
+      "SlNo": 4,
+      "EmpId": "20001",
+      "EmpName": "Amit",
+      "PropertyName": "Land Plot",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "02.02.2026",
+      "DisposedOn": "05.03.2026",
+      "AppliedOn": "05.02.2026",
+      "Status": "Updated"
+    },
+    {
+      "SlNo": 5,
+      "EmpId": "20002",
+      "EmpName": "Riya",
+      "PropertyName": "Car",
+      "PropertyType": "Movable",
+      "AcquiredOn": "11.01.2026",
+      "DisposedOn": "",
+      "AppliedOn": "12.01.2026",
+      "Status": "Approval Pending with SVP"
+    },
+    {
+      "SlNo": 6,
+      "EmpId": "20003",
+      "EmpName": "Rahul",
+      "PropertyName": "House",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "15.01.2026",
+      "DisposedOn": "",
+      "AppliedOn": "16.01.2026",
+      "Status": "Approval Pending with SBU"
+    },
+    {
+      "SlNo": 7,
+      "EmpId": "20004",
+      "EmpName": "Sneha",
+      "PropertyName": "Diamond Ring",
+      "PropertyType": "Movable",
+      "AcquiredOn": "18.01.2026",
+      "DisposedOn": "",
+      "AppliedOn": "20.01.2026",
+      "Status": "Updated"
+    },
+    {
+      "SlNo": 8,
+      "EmpId": "20005",
+      "EmpName": "Arjun",
+      "PropertyName": "Flat",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "21.01.2026",
+      "DisposedOn": "",
+      "AppliedOn": "23.01.2026",
+      "Status": "Approval Pending with SVP"
+    },
+    {
+      "SlNo": 9,
+      "EmpId": "20006",
+      "EmpName": "Priya",
+      "PropertyName": "Gold Coins",
+      "PropertyType": "Movable",
+      "AcquiredOn": "25.01.2026",
+      "DisposedOn": "",
+      "AppliedOn": "26.01.2026",
+      "Status": "Approval Pending with SBU"
+    },
+    {
+      "SlNo": 10,
+      "EmpId": "20007",
+      "EmpName": "Karan",
+      "PropertyName": "Land",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "28.01.2026",
+      "DisposedOn": "",
+      "AppliedOn": "29.01.2026",
+      "Status": "Updated"
+    },
+
+    {
+      "SlNo": 11,
+      "EmpId": "20008",
+      "EmpName": "Neha",
+      "PropertyName": "House",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "01.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "02.02.2026",
+      "Status": "Approval Pending with SVP"
+    },
+    {
+      "SlNo": 12,
+      "EmpId": "20009",
+      "EmpName": "Vikas",
+      "PropertyName": "Bike",
+      "PropertyType": "Movable",
+      "AcquiredOn": "03.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "04.02.2026",
+      "Status": "Updated"
+    },
+    {
+      "SlNo": 13,
+      "EmpId": "20010",
+      "EmpName": "Anjali",
+      "PropertyName": "Flat",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "05.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "06.02.2026",
+      "Status": "Approval Pending with SBU"
+    },
+    {
+      "SlNo": 14,
+      "EmpId": "20011",
+      "EmpName": "Manish",
+      "PropertyName": "Gold Chain",
+      "PropertyType": "Movable",
+      "AcquiredOn": "07.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "08.02.2026",
+      "Status": "Updated"
+    },
+    {
+      "SlNo": 15,
+      "EmpId": "20012",
+      "EmpName": "Pooja",
+      "PropertyName": "Land Plot",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "09.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "10.02.2026",
+      "Status": "Approval Pending with SVP"
+    },
+    {
+      "SlNo": 16,
+      "EmpId": "20013",
+      "EmpName": "Rohit",
+      "PropertyName": "Car",
+      "PropertyType": "Movable",
+      "AcquiredOn": "11.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "12.02.2026",
+      "Status": "Approval Pending with SBU"
+    },
+    {
+      "SlNo": 17,
+      "EmpId": "20014",
+      "EmpName": "Simran",
+      "PropertyName": "House",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "13.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "14.02.2026",
+      "Status": "Updated"
+    },
+    {
+      "SlNo": 18,
+      "EmpId": "20015",
+      "EmpName": "Deepak",
+      "PropertyName": "Laptop",
+      "PropertyType": "Movable",
+      "AcquiredOn": "15.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "16.02.2026",
+      "Status": "Approval Pending with SVP"
+    },
+    {
+      "SlNo": 19,
+      "EmpId": "20016",
+      "EmpName": "Nisha",
+      "PropertyName": "Flat",
+      "PropertyType": "Immovable",
+      "AcquiredOn": "17.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "18.02.2026",
+      "Status": "Updated"
+    },
+    {
+      "SlNo": 20,
+      "EmpId": "20017",
+      "EmpName": "Sahil",
+      "PropertyName": "Gold Ring",
+      "PropertyType": "Movable",
+      "AcquiredOn": "19.02.2026",
+      "DisposedOn": "",
+      "AppliedOn": "20.02.2026",
+      "Status": "Approval Pending with SBU"
+    }
+  ]
+}

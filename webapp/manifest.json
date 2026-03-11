@@ -1,0 +1,95 @@
+{
+  "_version": "1.81.0",
+  "sap.app": {
+    "id": "nwproductsdata",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.20.2",
+      "toolsId": "a1b38d8c-6f2a-49b4-b54c-df167a9885c5"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/northwind/northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+        "libs": {
+            "sap.ui.core": {},
+            "sap.m": {},
+            "sap.f": {},
+            "sap.uxap": {}
+        }
+    },
+    "routing": {
+        "config": {
+            "routerClass": "sap.f.routing.Router",
+            "viewType": "XML",
+            "viewPath": "nwproductsdata.view",
+            "controlId": "idAppControl",
+            "controlAggregation": "beginColumnPages",
+            "async": true
+        },
+        "routes": [
+            {
+                "name": "master",
+                "pattern": "",
+                "target": "master"
+            },
+            {
+                "name": "detail",
+                "pattern": "detail/{requestId}",
+                "target": ["master", "detail"],
+                "layout": "TwoColumnsBeginExpanded"
+            }
+        ],
+        "targets": {
+            "master": {
+                "viewName": "View1",
+                "controlAggregation": "beginColumnPages"
+            },
+            "detail": {
+                "viewName": "Detail",
+                "controlAggregation": "midColumnPages"
+            }
+        }
+    },
+    "rootView": {
+        "viewName": "nwproductsdata.view.App",
+        "type": "XML",
+        "id": "App",
+        "async": true
+    }
+  }
+}

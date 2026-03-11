@@ -1,0 +1,123 @@
+<mvc:View controllerName="nwproductsdata.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Page title="Property Acquire / Dispose Application">
+        <content>
+            <IconTabBar id="idMainTabBar" expandable="false" class="sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter key="employee" text="Employee" >
+                        <HBox class="sapUiSmallMarginBottom sapUiSmallMarginTop">
+                            <Label text="Request Status" class="sapUiSmallMarginEnd"/>
+                            <Select id="idStatusFilterEmployee" width="250px" class="sapUiSmallMarginEnd">
+                                <items>
+                                    <core:Item key="All" text="All"/>
+                                    <core:Item key="Updated" text="Updated"/>
+                                    <core:Item key="Approval Pending with SVP" text="Approval Pending with SVP"/>
+                                    <core:Item key="Approval Pending with SBU" text="Approval Pending with SBU"/>
+                                </items>
+                            </Select>
+
+                            <Label text="Property Type" class="sapUiSmallMarginEnd"/>
+                            <Select id="idTypeFilterEmployee" width="200px" class="sapUiSmallMarginEnd">
+                                <items>
+                                    <core:Item key="All" text="All"/>
+                                    <core:Item key="Immovable" text="Immovable"/>
+                                    <core:Item key="Movable" text="Movable"/>
+                                </items>
+                            </Select>
+                            <Button text="Go" type="Emphasized" press="onFilterPress"/>
+                        </HBox>
+
+                        <Table id="idTableEmployee" growing="true" growingThreshold="10" items="{/Requests}">
+                            <columns>
+                                <Column><Text text="Sl No"/></Column>
+                                <Column><Text text="Emp ID"/></Column>
+                                <Column><Text text="Emp Name"/></Column>
+                                <Column><Text text="Property Name"/></Column>
+                                <Column><Text text="Property Type"/></Column>
+                                <Column><Text text="Acquired On"/></Column>
+                                <Column><Text text="Disposed On"/></Column>
+                                <Column><Text text="Applied On"/></Column>
+                                <Column><Text text="Status"/></Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem type="Active" press="onRowPress">
+                                    <cells>
+                                        <Text text="{SlNo}"/><Text text="{EmpId}"/><Text text="{EmpName}"/>
+                                        <Text text="{PropertyName}"/><Text text="{PropertyType}"/>
+                                        <Text text="{AcquiredOn}"/><Text text="{DisposedOn}"/>
+                                        <Text text="{AppliedOn}"/><ObjectStatus text="{Status}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </IconTabFilter>
+
+                    <IconTabFilter key="sbu" text="SBU Head">
+                        <HBox class="sapUiSmallMarginBottom sapUiSmallMarginTop">
+                            <Label text="Request Status" class="sapUiSmallMarginEnd"/>
+                            <Select id="idStatusFilterSBU" width="250px" class="sapUiSmallMarginEnd">
+                                <items>
+                                    <core:Item key="All" text="All"/>
+                                    <core:Item key="Updated" text="Updated"/>
+                                    <core:Item key="Approval Pending with SVP" text="Approval Pending with SVP"/>
+                                    <core:Item key="Approval Pending with SBU" text="Approval Pending with SBU"/>
+                                </items>
+                            </Select>
+
+                            <Label text="Property Type" class="sapUiSmallMarginEnd"/>
+                            <Select id="idTypeFilterSBU" width="200px" class="sapUiSmallMarginEnd">
+                                <items>
+                                    <core:Item key="All" text="All"/>
+                                    <core:Item key="Immovable" text="Immovable"/>
+                                    <core:Item key="Movable" text="Movable"/>
+                                </items>
+                            </Select>
+                            <Button text="Go" type="Emphasized" press="onFilterPress"/>
+                        </HBox>
+
+                        <Table id="idTableSBU" growing="true" growingThreshold="10" items="{/Requests}">
+                            <columns>
+                                <Column><Text text="Sl No"/></Column>
+                                <Column><Text text="Emp ID"/></Column>
+                                <Column><Text text="Emp Name"/></Column>
+                                <Column><Text text="Property Name"/></Column>
+                                <Column><Text text="Property Type"/></Column>
+                                <Column><Text text="Acquired On"/></Column>
+                                <Column><Text text="Disposed On"/></Column>
+                                <Column><Text text="Applied On"/></Column>
+                                <Column><Text text="Status"/></Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem type="Active" press="onRowPress">
+                                    <cells>
+                                        <Text text="{SlNo}"/><Text text="{EmpId}"/><Text text="{EmpName}"/>
+                                        <Text text="{PropertyName}"/><Text text="{PropertyType}"/>
+                                        <Text text="{AcquiredOn}"/><Text text="{DisposedOn}"/>
+                                        <Text text="{AppliedOn}"/><ObjectStatus text="{Status}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </IconTabFilter>
+
+                    <IconTabFilter key="svp" text="SVP HR" >
+                        <Table id="idTableSVP" items="{}">
+                             <columns><Column><Text text="Information"/></Column></columns>
+                             <items><ColumnListItem><cells><Text text="No requests for SVP view."/></cells></ColumnListItem></items>
+                        </Table>
+                    </IconTabFilter>
+
+                    <IconTabFilter key="vigilance" text="Vigilance" >
+                        <Table id="idTableVigilance" items="{}">
+                            <columns><Column><Text text="Information"/></Column></columns>
+                            <items><ColumnListItem><cells><Text text="Vigilance records hidden."/></cells></ColumnListItem></items>
+                        </Table>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+    </Page>
+</mvc:View>

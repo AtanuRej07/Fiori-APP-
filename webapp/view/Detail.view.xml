@@ -1,0 +1,391 @@
+<mvc:View controllerName="nwproductsdata.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.uxap"
+    xmlns:layout="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:m="sap.m"
+    xmlns:core="sap.ui.core"
+    height="100%">
+
+<ObjectPageLayout id="ObjectPageLayout"
+    showTitleInHeaderContent="true"
+    upperCaseAnchorBar="false">
+
+<headerTitle>
+<ObjectPageDynamicHeaderTitle>
+
+<expandedHeading>
+<m:Title text="Property Declaration"/>
+</expandedHeading>
+
+<snappedHeading>
+<m:Title text="Property Declaration"/>
+</snappedHeading>
+
+<actions>
+<m:OverflowToolbarButton
+icon="sap-icon://decline"
+type="Transparent"
+press=".handleClose"
+tooltip="Close"/>
+</actions>
+
+</ObjectPageDynamicHeaderTitle>
+</headerTitle>
+
+<!-- ================= EMPLOYEE DETAILS ================= -->
+
+<sections>
+
+<ObjectPageSection title="Employee Details">
+
+<subSections>
+<ObjectPageSubSection>
+
+<blocks>
+
+<f:SimpleForm
+editable="false"
+layout="ResponsiveGridLayout"
+columnsL="2"
+columnsM="2">
+
+<f:content>
+
+<core:Title text="Identification"/>
+
+<m:Label text="Employee Id"/>
+<m:Text text="{EmpId}"/>
+
+<m:Label text="Name"/>
+<m:Text text="{EmpName}"/>
+
+<m:Label text="Designation"/>
+<m:Text text="Manager"/>
+
+<m:Label text="Grade"/>
+<m:Text text="E1"/>
+
+<core:Title text="Organization"/>
+
+<m:Label text="SBU/Function"/>
+<m:Text text="Support"/>
+
+<m:Label text="Location"/>
+<m:Text text="Mumbai"/>
+
+<m:Label text="SBU Head"/>
+<m:Text text="SBU Head Name"/>
+
+<m:Label text="SVP"/>
+<m:Text text="SVP Name"/>
+
+</f:content>
+</f:SimpleForm>
+
+</blocks>
+</ObjectPageSubSection>
+</subSections>
+
+</ObjectPageSection>
+
+
+<!-- ================= PROPERTY TYPE ================= -->
+
+<ObjectPageSection title="Property Type Selection">
+
+<subSections>
+<ObjectPageSubSection>
+
+<blocks>
+
+<f:SimpleForm layout="ResponsiveGridLayout">
+
+<f:content>
+
+<m:Label text="Property Type"/>
+
+<m:Select id="idPropertyTypeSelect"
+change="onPropertyTypeChange">
+
+<m:items>
+<core:Item key="" text="Select Property Type"/>
+<core:Item key="Immovable" text="Immovable"/>
+<core:Item key="Movable" text="Movable"/>
+</m:items>
+
+</m:Select>
+
+</f:content>
+</f:SimpleForm>
+
+</blocks>
+</ObjectPageSubSection>
+</subSections>
+
+</ObjectPageSection>
+
+
+<!-- ================= IMMOVABLE PROPERTY ================= -->
+
+<ObjectPageSection
+id="idImmovableSection"
+visible="false"
+title="Immovable Property Details">
+
+<subSections>
+<ObjectPageSubSection>
+
+<blocks>
+
+<f:SimpleForm
+layout="ResponsiveGridLayout"
+columnsL="2"
+columnsM="2">
+
+<f:content>
+
+<core:Title text="Property Information"/>
+
+<m:Label text="Property Name"/>
+<m:Input/>
+
+<m:Label text="Type"/>
+<m:Select>
+<m:items>
+<core:Item text="Land"/>
+<core:Item text="Plot"/>
+<core:Item text="Flat"/>
+<core:Item text="House"/>
+</m:items>
+</m:Select>
+
+<m:Label text="Property Measurement"/>
+<m:Input/>
+
+<m:Label text="Area Unit"/>
+<m:Input/>
+
+<m:Label text="Ownership"/>
+<m:Select>
+<m:items>
+<core:Item text="Self"/>
+<core:Item text="Spouse"/>
+<core:Item text="Dependent"/>
+</m:items>
+</m:Select>
+
+<m:Label text="Property Value"/>
+<m:Input/>
+
+<m:Label text="Value Unit"/>
+<m:Input/>
+
+<core:Title text="Property Address"/>
+
+<m:Label text="Address Line 1"/>
+<m:Input/>
+
+<m:Label text="Address Line 2"/>
+<m:Input/>
+
+<core:Title text="Property Acquired / Disposed"/>
+
+<m:Label text="Status"/>
+<m:Select
+id="idAcquireDisposeSelect"
+change="onAcquireDisposeChange">
+
+<m:items>
+<core:Item key="Acquire" text="Acquired"/>
+<core:Item key="Dispose" text="Disposed"/>
+</m:items>
+
+</m:Select>
+
+</f:content>
+</f:SimpleForm>
+
+</blocks>
+</ObjectPageSubSection>
+</subSections>
+
+</ObjectPageSection>
+
+
+<!-- ================= ACQUISITION DETAILS ================= -->
+
+<ObjectPageSection
+id="idAcquiredSection"
+visible="false"
+title="Acquisition Details">
+
+<subSections>
+<ObjectPageSubSection>
+
+<blocks>
+
+<f:SimpleForm
+layout="ResponsiveGridLayout"
+columnsL="2"
+columnsM="2">
+
+<f:content>
+
+<m:Label text="How Property Acquired"/>
+<m:Select>
+<m:items>
+<core:Item text="Purchase"/>
+<core:Item text="Lease"/>
+<core:Item text="Mortgage"/>
+<core:Item text="Inheritance"/>
+<core:Item text="Gift"/>
+<core:Item text="Other"/>
+</m:items>
+</m:Select>
+
+<m:Label text="Date of Acquisition"/>
+<m:DatePicker/>
+
+<core:Title text="Acquired From"/>
+
+<m:Label text="Type"/>
+<m:Select>
+<m:items>
+<core:Item text="Dependents"/>
+<core:Item text="Other"/>
+</m:items>
+</m:Select>
+
+<m:Label text="Name"/>
+<m:Input/>
+
+<m:Label text="Address Line 1"/>
+<m:Input/>
+
+<m:Label text="Address Line 2"/>
+<m:Input/>
+
+<core:Title text="Financial Information"/>
+
+<m:Label text="Financial Source"/>
+<m:Select/>
+
+<m:Label text="Source Details"/>
+<m:Input/>
+
+<m:Label text="Mode of Payment"/>
+<m:Select/>
+
+<m:Label text="Payment Reference"/>
+<m:Input/>
+
+<m:Label text="Payment Date"/>
+<m:DatePicker/>
+
+<m:Label text="Bank Name"/>
+<m:Input/>
+
+<m:Label text="Amount"/>
+<m:Input/>
+
+<m:Label text="Annual Income from Property"/>
+<m:Input/>
+
+<m:Label text="Amount Unit"/>
+<m:Input/>
+
+<m:Label text="Other Relevant Fact"/>
+<m:TextArea rows="3"/>
+
+</f:content>
+</f:SimpleForm>
+
+</blocks>
+</ObjectPageSubSection>
+</subSections>
+
+</ObjectPageSection>
+
+
+<!-- ================= DISPOSAL DETAILS ================= -->
+
+<ObjectPageSection
+id="idDisposedSection"
+visible="false"
+title="Disposal Details">
+
+<subSections>
+<ObjectPageSubSection>
+
+<blocks>
+
+<f:SimpleForm layout="ResponsiveGridLayout">
+
+<f:content>
+
+<m:Label text="Disposed On"/>
+<m:DatePicker/>
+
+<m:Label text="Buyer Name"/>
+<m:Input/>
+
+<m:Label text="Address Line 1"/>
+<m:Input/>
+
+<m:Label text="Address Line 2"/>
+<m:Input/>
+
+</f:content>
+</f:SimpleForm>
+
+</blocks>
+</ObjectPageSubSection>
+</subSections>
+
+</ObjectPageSection>
+
+
+<!-- ================= ATTACHMENTS ================= -->
+
+<ObjectPageSection title="Attachments">
+
+<subSections>
+<ObjectPageSubSection>
+
+<blocks>
+
+<m:UploadCollection/>
+
+</blocks>
+
+</ObjectPageSubSection>
+</subSections>
+
+</ObjectPageSection>
+
+
+<!-- ================= DECLARATION ================= -->
+
+<ObjectPageSection title="Declaration">
+
+<subSections>
+<ObjectPageSubSection>
+
+<blocks>
+
+<m:Text text="I hereby declare that the particulars given above are true and correct."/>
+
+</blocks>
+
+</ObjectPageSubSection>
+</subSections>
+
+</ObjectPageSection>
+
+
+</sections>
+
+</ObjectPageLayout>
+
+</mvc:View>

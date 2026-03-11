@@ -1,0 +1,7 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <VBox class="sapUiSmallMargin">
+        <Title text="Welcome, Atanu!" titleStyle="H2" class="sapUiTinyMarginBottom" />
+        <MessageStrip text="You are currently viewing the Northwind Data Management Portal." type="Information" showIcon="true" class="sapUiSmallMarginBottom" />
+    </VBox>
+</core:FragmentDefinition>
