@@ -52,6 +52,8 @@ sap.ui.define(
                 oBinding.filter(aFilters);
             },
 
+            // Just checking
+
             onRowPress: function (oEvent) {
                 var oCtx = oEvent.getSource().getBindingContext();
                 var sPath = oCtx.getPath();
